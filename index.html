@@ -1,146 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Label Darzi - Style Companion Packages</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-      padding: 20px;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-    .header {
-      background: linear-gradient(45deg, #2c3e50, #3498db);
-      color: white;
-      padding: 60px 40px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .header::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: rotate 20s linear infinite;
-    }
-    @keyframes rotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .brand-title {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      letter-spacing: 2px;
-      position: relative;
-      z-index: 1;
-    }
-    .by-line {
-      font-size: 1.3rem;
-      opacity: 0.9;
-      font-weight: 300;
-      margin-bottom: 30px;
-      position: relative;
-      z-index: 1;
-    }
-    .tagline {
-      font-size: 1.4rem;
-      font-style: italic;
-      opacity: 0.95;
-      position: relative;
-      z-index: 1;
-      background: rgba(255,255,255,0.1);
-      padding: 15px 30px;
-      border-radius: 30px;
-      backdrop-filter: blur(10px);
-      display: inline-block;
-    }
-
-    /* 🔹 Sticky Navigation Bar */
-    nav {
-      text-align: center;
-      background: #333;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
-
-    .intro {
-      padding: 60px 40px;
-      text-align: center;
-      background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-    }
-    .intro h2 {
-      font-size: 2.8rem;
-      margin-bottom: 25px;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-    .intro p {
-      font-size: 1.3rem;
-      color: #666;
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.8;
-    }
-
-    /* (rest of your CSS remains exactly the same...) */
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Darzi - Transformation Packages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .brand-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .by-line {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .intro {
+            padding: 50px 40px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+        
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .intro p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .packages {
+            padding: 60px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .package {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .package:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .starter {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+        }
+        
+        .complete {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+            border: 3px solid #fdcb6e;
+        }
+        
+        .premium {
+            background: linear-gradient(135deg, #fdcb6e, #e17055);
+        }
+        
+        .package-header {
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        .package-type {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .package-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .duration {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .original-price {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+        
+        .savings {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+        
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .most-popular {
+            background: #f39c12;
+        }
+        
+        .best-value {
+            background: #27ae60;
+        }
+        
+        .package-content {
+            background: white;
+            padding: 40px 30px;
+        }
+        
+        .features {
+            list-style: none;
+        }
+        
+        .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.1rem;
+            color: #555;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        .features li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .special-section {
+            background: #2c3e50;
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .special-title {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .special-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .special-feature {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .special-feature h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #74b9ff;
+        }
+        
+        .special-feature p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .contact {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .contact h3 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 25px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        
+        .footer-message {
+            margin-top: 30px;
+            font-size: 1.3rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .brand-title {
+                font-size: 2rem;
+            }
+            
+            .packages {
+                grid-template-columns: 1fr;
+                padding: 30px 20px;
+            }
+            
+            .intro, .special-section, .contact {
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1 class="brand-title">LABEL DARZI</h1>
-      <p class="by-line">By Ravneet Arora</p>
-      <div class="tagline">Your Stylist. Your Everyday Partner. Your Style Story.</div>
+    <div class="container">
+        <div class="header">
+            <h1 class="brand-title">LABEL DARZI</h1>
+            <p class="by-line">By RAVNEET ARORA</p>
+        </div>
+        
+        <div class="intro">
+            <h2>Your Transformation Journey</h2>
+            <p>We believe transformation is not just about clothes—it's about unleashing your inner confidence, embracing your unique beauty, and expressing your authentic self. Our expertly crafted transformation journeys reveal the most radiant version of you.</p>
+        </div>
+        
+        <div class="packages">
+            <div class="package starter">
+                <div class="package-header">
+                    <div class="package-type">Starter</div>
+                    <h3 class="package-title">Mini Style Transformation</h3>
+                    <div class="duration">7 Days</div>
+                    <div class="price">₹7,499/-</div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 20px; display: inline-block; font-weight: 600;">LIMITED OFFER</div>
+                </div>
+                <div class="package-content">
+                    <ul class="features">
+                        <li><span class="feature-title">Face & body shape analysis</span> - Discover your perfect cuts and styles</li>
+                        <li><span class="feature-title">Hair styling guidance</span> - Get recommended cuts, colors & styling tips</li>
+                        <li><span class="feature-title">Skincare & basic self-makeup</span> - Daily routine & natural makeup techniques</li>
+                        <li><span class="feature-title">2 styled outfits from existing wardrobe</span> - Maximize what you already own</li>
+                        <li><span class="feature-title">Mix and matching outfit formula guide</span> - Create 10+ looks from 5 pieces</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="package complete">
+                <div class="badge most-popular">MOST POPULAR</div>
+                <div class="package-header">
+                    <div class="package-type">Complete</div>
+                    <h3 class="package-title">Complete Makeover</h3>
+                    <div class="duration">14 Days</div>
+                    <div class="price">₹12,499/-</div>
+                </div>
+                <div class="package-content">
+                    <p style="font-weight: 600; color: #2c3e50; margin-bottom: 20px; font-size: 1.1rem;">Everything in MINI STYLE TRANSFORMATION</p>
+                    <ul class="features">
+                        <li><span class="feature-title">Wardrobe detox & restyling</span> - Organize and refresh your closet</li>
+                        <li><span class="feature-title">Personal shopping guidance</span> - Learn what to buy and where</li>
+                        <li><span class="feature-title">Everyday & occasion makeup</span> - Master daily and party looks</li>
+                        <li><span class="feature-title">Accessories styling</span> - Perfect jewelry, bags & scarves selection</li>
+                        <li><span class="feature-title">Footwear styling</span> - Match shoes perfectly with every outfit</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="package premium">
+                <div class="badge best-value">BEST VALUE</div>
+                <div class="package-header">
+                    <div class="package-type">Premium</div>
+                    <h3 class="package-title">Signature Style Journey</h3>
+                    <div class="duration">21 Days</div>
+                    <div class="original-price">₹25,000/-</div>
+                    <div class="price">₹18,499/-</div>
+                    <div class="savings">Save ₹6,501! HOT DEAL</div>
+                </div>
+                <div class="package-content">
+                    <p style="font-weight: 600; color: #2c3e50; margin-bottom: 20px; font-size: 1.1rem;">COMPLETE TRANSFORMATION EXPERIENCE</p>
+                    <ul class="features">
+                        <li><span class="feature-title">Color analysis</span> - Discover your perfect color palette for skin tone</li>
+                        <li><span class="feature-title">Complete makeover</span> - Head-to-toe transformation with expert guidance</li>
+                        <li><span class="feature-title">Photoshoot-ready looks</span> - Professional styling for special occasions</li>
+                        <li><span class="feature-title">Grooming & confidence coaching</span> - Build self-assurance and personal presence</li>
+                        <li><span class="feature-title">Customized Style Guide (PDF)</span> - Your personal style bible to keep forever</li>
+                        <li><span class="feature-title">Body shape styling</span> - Learn what cuts and fits flatter your figure</li>
+                        <li><span class="feature-title">1 month follow-up support</span> - Continued guidance after your transformation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="special-section">
+            <h3 class="special-title">What Makes Us Special</h3>
+            <div class="special-features">
+                <div class="special-feature">
+                    <h4>Personalized Consultation</h4>
+                    <p>One-on-one personalized consultation</p>
+                </div>
+                <div class="special-feature">
+                    <h4>Affordable Solutions</h4>
+                    <p>Affordable, practical styling solutions</p>
+                </div>
+                <div class="special-feature">
+                    <h4>Confidence Building</h4>
+                    <p>Confidence & grooming guidance</p>
+                </div>
+                <div class="special-feature">
+                    <h4>Ongoing Support</h4>
+                    <p>Ongoing WhatsApp/Email support during the package</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact">
+            <h3>For Bookings & Inquiries</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <a href="tel:+919815336444">+91 9815336444</a>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <a href="mailto:labeldarziofficial@gmail.com">labeldarziofficial@gmail.com</a>
+                </div>
+            </div>
+            <p class="footer-message">We look forward to creating your dream transformation!</p>
+        </div>
     </div>
-
-    <!-- 🔹 Sticky Navigation Bar -->
-    <nav>
-      <a href="/">Home</a>
-      <a href="/elite-style-companion/">Elite Style Companion</a>
-    </nav>
-
-    <!-- 🔹 Your homepage content continues -->
-    <div class="intro">
-      <h2>Style Companion Packages</h2>
-      <p>Experience ongoing style transformation with our comprehensive companion packages. From daily outfit guidance to seasonal wardrobe refreshes, we're with you every step of your style journey.</p>
-    </div>
-
-    <!-- all your packages, contact section, and value sections go here (unchanged) -->
-
-  </div>
 </body>
 </html>

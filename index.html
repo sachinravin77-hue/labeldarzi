@@ -92,6 +92,90 @@
             line-height: 1.8;
         }
         
+        /* Navigation Section */
+        .navigation-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .nav-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .nav-options {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            min-width: 250px;
+            border: 2px solid transparent;
+        }
+        
+        .nav-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-color: #74b9ff;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .nav-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .transformation-card .nav-card-icon {
+            color: #74b9ff;
+        }
+        
+        .companion-card .nav-card-icon {
+            color: #fd79a8;
+        }
+        
+        .nav-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .nav-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .nav-card .highlight {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .companion-card .highlight {
+            background: linear-gradient(135deg, #fd79a8, #e84393);
+        }
+        
         .packages {
             padding: 60px 40px;
             display: grid;
@@ -328,13 +412,22 @@
                 padding: 30px 20px;
             }
             
-            .intro, .special-section, .contact {
+            .intro, .special-section, .contact, .navigation-section {
                 padding: 30px 20px;
             }
             
             .contact-info {
                 flex-direction: column;
                 gap: 20px;
+            }
+            
+            .nav-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-card {
+                min-width: 280px;
             }
         }
     </style>
@@ -351,7 +444,25 @@
             <p>We believe transformation is not just about clothes—it's about unleashing your inner confidence, embracing your unique beauty, and expressing your authentic self. Our expertly crafted transformation journeys reveal the most radiant version of you.</p>
         </div>
         
-        <div class="packages">
+        <div class="navigation-section">
+            <h3 class="nav-title">Choose Your Style Journey</h3>
+            <div class="nav-options">
+                <a href="#transformation-packages" class="nav-card transformation-card">
+                    <span class="nav-card-icon">✨</span>
+                    <h3>Transformation Packages</h3>
+                    <p>Complete makeover packages for a brand new you</p>
+                    <span class="highlight">7-21 Days</span>
+                </a>
+                <a href="elite-companion.html" class="nav-card companion-card">
+                    <span class="nav-card-icon">👑</span>
+                    <h3>Elite Style Companion</h3>
+                    <p>Ongoing styling support with daily guidance</p>
+                    <span class="highlight">3-12 Months</span>
+                </a>
+            </div>
+        </div>
+        
+        <div id="transformation-packages" class="packages">
             <div class="package starter">
                 <div class="package-header">
                     <div class="package-type">Starter</div>

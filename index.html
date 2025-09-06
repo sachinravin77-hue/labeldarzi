@@ -1,150 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Label Darzi - Style Companion Packages</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .header {
-            background: linear-gradient(45deg, #2c3e50, #3498db);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-        
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .brand-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .by-line {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            font-weight: 300;
-            margin-bottom: 30px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .tagline {
-            font-size: 1.4rem;
-            font-style: italic;
-            opacity: 0.95;
-            position: relative;
-            z-index: 1;
-            background: rgba(255,255,255,0.1);
-            padding: 15px 30px;
-            border-radius: 30px;
-            backdrop-filter: blur(10px);
-            display: inline-block;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Label Darzi - Style Companion Packages</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .header {
+      background: linear-gradient(45deg, #2c3e50, #3498db);
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+    }
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .brand-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      position: relative;
+      z-index: 1;
+    }
+    .by-line {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      font-weight: 300;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .tagline {
+      font-size: 1.4rem;
+      font-style: italic;
+      opacity: 0.95;
+      position: relative;
+      z-index: 1;
+      background: rgba(255,255,255,0.1);
+      padding: 15px 30px;
+      border-radius: 30px;
+      backdrop-filter: blur(10px);
+      display: inline-block;
+    }
 
-        /* 🔹 Navigation Bar */
-        nav {
-            text-align: center;
-            background: #333;
-            padding: 15px;
-        }
+    /* 🔹 Sticky Navigation Bar */
+    nav {
+      text-align: center;
+      background: #333;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+    .intro {
+      padding: 60px 40px;
+      text-align: center;
+      background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    }
+    .intro h2 {
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+    .intro p {
+      font-size: 1.3rem;
+      color: #666;
+      max-width: 900px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
 
-        nav a:hover {
-            color: #ffd700;
-        }
-        
-        .intro {
-            padding: 60px 40px;
-            text-align: center;
-            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
-        }
-        
-        .intro h2 {
-            font-size: 2.8rem;
-            margin-bottom: 25px;
-            color: #2c3e50;
-            font-weight: 600;
-        }
-        
-        .intro p {
-            font-size: 1.3rem;
-            color: #666;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        /* (rest of your CSS unchanged) */
-    </style>
+    /* (rest of your CSS remains exactly the same...) */
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1 class="brand-title">LABEL DARZI</h1>
-            <p class="by-line">By Ravneet Arora</p>
-            <div class="tagline">Your Stylist. Your Everyday Partner. Your Style Story.</div>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1 class="brand-title">LABEL DARZI</h1>
+      <p class="by-line">By Ravneet Arora</p>
+      <div class="tagline">Your Stylist. Your Everyday Partner. Your Style Story.</div>
+    </div>
 
-        <!-- 🔹 Navigation Bar Added -->
-        <nav>
-            <a href="/">Home</a>
-            <a href="/elite-style-companion/">Elite Style Companion</a>
-        </nav>
-        
-        <!-- Your content continues as before -->
-        <div class="intro">
-            <h2>Style Companion Packages</h2>
-            <p>Experience ongoing style transformation with our comprehensive companion packages. From daily outfit guidance to seasonal wardrobe refreshes, we're with you every step of your style journey.</p>
-        </div>
+    <!-- 🔹 Sticky Navigation Bar -->
+    <nav>
+      <a href="/">Home</a>
+      <a href="/elite-style-companion/">Elite Style Companion</a>
+    </nav>
 
-        <!-- rest of your code unchanged -->
+    <!-- 🔹 Your homepage content continues -->
+    <div class="intro">
+      <h2>Style Companion Packages</h2>
+      <p>Experience ongoing style transformation with our comprehensive companion packages. From daily outfit guidance to seasonal wardrobe refreshes, we're with you every step of your style journey.</p>
+    </div>
+
+    <!-- all your packages, contact section, and value sections go here (unchanged) -->
+
+  </div>
+</body>
+</html>
